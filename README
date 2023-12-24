@@ -1,0 +1,12 @@
+### Configure
+C++ 17 & CMake 3.24 or higher are required
+MinGW 32 версия 6.3.0-1.
+
+cmake [options] -S <path-to-source> -B <path-to-build>
+path-to-source путь к sfml-source
+path-to-build папка в sfml-source для сборки
+cmake --build . (из папки для сборки)
+
+дополнительная установка библоитеки SFML не требуется - необходиые исходные файлы в папке проекта
+текстуры при сборке в одной папке с исходниками
+так же в исходниках TinyXml

@@ -17,7 +17,7 @@ class Enemy {
     bool onLadder;
     bool down;
     bool f = 0;
-    int id;
+    //int id;
     float timer;
 public:
     AnimationManager anim;

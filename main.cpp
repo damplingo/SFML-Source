@@ -39,7 +39,7 @@ void win_func(Level& level, AnimationManager& Kong_Anim, sf::RenderWindow& windo
 
                     sf::Sprite heart;
                     sf::Image heart_i;
-                    heart_i.loadFromFile("heart.png");
+                    heart_i.loadFromFile("T/heart.png");
                     heart_i.createMaskFromColor(sf::Color(0,91,127));
                     sf::Texture heart_t;
                     heart_t.loadFromImage(heart_i);
@@ -55,7 +55,7 @@ void win_func(Level& level, AnimationManager& Kong_Anim, sf::RenderWindow& windo
 
 void print_bonus(int bonus, sf::RenderWindow& window, int record, int score) {
     sf::Font font;
-    font.loadFromFile("BungeeSpice-Regular.ttf");
+    font.loadFromFile("T/BungeeSpice-Regular.ttf");
     sf::Text text_bonus;
     text_bonus.setFont(font);
     text_bonus.setFillColor(sf::Color::White);
@@ -88,9 +88,9 @@ void print_bonus(int bonus, sf::RenderWindow& window, int record, int score) {
 }
 
 void changeLevel(Level &lvl,int &numberLevel) {
-    if (numberLevel == 1) { lvl.LoadFromFile("Level_1_ladder2_new_map_xml.tmx"); }
-    if (numberLevel == 2) { lvl.LoadFromFile("Level_2_map.tmx");}
-    if (numberLevel == 3) { lvl.LoadFromFile("Level_3_map.tmx");}
+    if (numberLevel == 1) { lvl.LoadFromFile("Map/Level_1_ladder2_new_map_xml.tmx"); }
+    if (numberLevel == 2) { lvl.LoadFromFile("Map/Level_2_map.tmx");}
+    if (numberLevel == 3) { lvl.LoadFromFile("Map/Level_3_map.tmx");}
     //if (numberLevel>3) {numberLevel = 1;lvl.LoadFromFile("Level_1_ladder2_new_map_xml.tmx");}
 }
 
@@ -101,7 +101,7 @@ void Play_Menu(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     window.clear(sf::Color::Black);
     sf::Texture texture;
-    texture.loadFromFile("loose_fone.jpeg");
+    texture.loadFromFile("T/loose_fone.jpeg");
     sf::Sprite sprite;
     sprite.setTexture(texture);
     while (window.isOpen()) {
@@ -152,7 +152,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     }
     sf::Texture jumpman_texture;
     sf::Image Image;
-    Image.loadFromFile("im.png");
+    Image.loadFromFile("T/im.png");
     Image.createMaskFromColor(sf::Color(112, 146, 190));
     jumpman_texture.loadFromImage(Image);
     auto win = level.GetObject("win");
@@ -172,13 +172,13 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     ///Kong set
     sf::Image Kong_Image;
-    Kong_Image.loadFromFile("Kong_details.png");
+    Kong_Image.loadFromFile("T/Kong_details.png");
     Kong_Image.createMaskFromColor(sf::Color(0, 91, 127));
     sf::Texture Kong_texture;
     Kong_texture.loadFromImage(Kong_Image);
     AnimationManager Kong_Anim;
     sf::Image Kong_i;
-    Kong_i.loadFromFile("Kong_krash.png");
+    Kong_i.loadFromFile("T/Kong_krash.png");
     Kong_i.createMaskFromColor(sf::Color(0, 91, 127));
     sf::Texture Kong_t;
     Kong_t.loadFromImage(Kong_i);
@@ -189,7 +189,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     ///Paulina set
 
     sf::Image Paulina_Image;
-    Paulina_Image.loadFromFile("Paulina.png");
+    Paulina_Image.loadFromFile("T/Paulina.png");
     Paulina_Image.createMaskFromColor(sf::Color(0, 91, 127));
     sf::Texture Paulina_Texture;
     Paulina_Texture.loadFromImage(Paulina_Image);
@@ -200,7 +200,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     ///bonus_set
     sf::Image bonus_image;
-    bonus_image.loadFromFile("bonus.png");
+    bonus_image.loadFromFile("T/bonus.png");
     bonus_image.createMaskFromColor(sf::Color(0, 91, 127));
     sf::Texture bonus_texture;
     bonus_texture.loadFromImage(bonus_image);
@@ -211,11 +211,11 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     AnimationManager barrel_anim;
     sf::Image Barrel;
-    Barrel.loadFromFile("barrel.png");
+    Barrel.loadFromFile("T/barrel.png");
     Barrel.createMaskFromColor(sf::Color(0, 105, 105));
 
     sf::Image Barrel_crash;
-    Barrel_crash.loadFromFile("barrel_crash.png");
+    Barrel_crash.loadFromFile("T/barrel_crash.png");
     Barrel_crash.createMaskFromColor(sf::Color(0, 105, 105));
 
     sf::Texture Barrel_texture;
@@ -236,7 +236,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     if (numberLevel == 1) {
 
-        Barrel_heap_image.loadFromFile("barrel_heap.png");
+        Barrel_heap_image.loadFromFile("T/barrel_heap.png");
         Barrel_heap_image.createMaskFromColor(sf::Color(0, 105, 105));
         Barrel_heap_texture.loadFromImage(Barrel_heap_image);
 
@@ -247,7 +247,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     ///set spring
     sf::Image spring_image;
     AnimationManager spring_animation;
-    spring_image.loadFromFile("spring.png");
+    spring_image.loadFromFile("T/spring.png");
     spring_image.createMaskFromColor(sf::Color(0, 105, 105));
     sf::Texture spring_texture;
     spring_texture.loadFromImage(spring_image);
@@ -262,7 +262,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     ///hammer
     sf::Texture hammer_texture;
     sf::Image hammer_image;
-    hammer_image.loadFromFile("hammer_2.png");
+    hammer_image.loadFromFile("T/hammer_2.png");
     hammer_image.createMaskFromColor(sf::Color(112, 146, 190));
     hammer_texture.loadFromImage(hammer_image);
     std::map<int, sf::Sprite> hammers;
@@ -280,7 +280,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     sf::Image fire_image;
     sf::Texture fire_texture;
-    fire_image.loadFromFile("fire.png");
+    fire_image.loadFromFile("T/fire.png");
     fire_image.createMaskFromColor(sf::Color(0, 105, 105));
     fire_texture.loadFromImage(fire_image);
     AnimationManager fire_anim;
@@ -291,9 +291,9 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     }
 
     sf::Texture s_fire_texture;
-    s_fire_texture.loadFromFile("s_fire.png");
+    s_fire_texture.loadFromFile("T/s_fire.png");
     sf::Texture s_fire_crash_texture;
-    s_fire_crash_texture.loadFromFile("s_fire_crash.png");
+    s_fire_crash_texture.loadFromFile("T/s_fire_crash.png");
     AnimationManager s_fire_anim;
     s_fire_anim.create("s_fire", Animation(s_fire_texture, 0,0,37.5, 33, 2, 0.01, 37.5));
     s_fire_anim.create("s_fire_crash", Animation(s_fire_crash_texture, 5, 0, 40, 32, 3, 0.005, 40));
@@ -304,7 +304,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
 
     sf::Image platform_image;
     sf::Texture platform_texture;
-    platform_image.loadFromFile("Moving_platform.png");
+    platform_image.loadFromFile("T/Moving_platform.png");
     platform_image.createMaskFromColor(sf::Color::White);
     platform_texture.loadFromImage(platform_image);
     AnimationManager platform_anim;
@@ -318,7 +318,7 @@ bool StartGame(int& numberLevel, sf::RenderWindow& window, int record, int score
     ///grit
     sf::Sprite grit_sprite;
     sf::Texture grit_texture;
-    grit_texture.loadFromFile("grit.png");
+    grit_texture.loadFromFile("T/grit.png");
     grit_sprite.setTexture(grit_texture);
     std::vector<sf::Sprite> grit_vector;
 

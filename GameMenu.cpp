@@ -16,7 +16,7 @@ GameMenu::GameMenu(sf::RenderWindow &window, float  menux, float menuy, int size
                    std::vector<sf::String>& name):menu_X(menux), menu_Y(menuy), menu_Step(step), max_menu(static_cast<int>(name.size())),
                    size_font(sizeFont), mainMenu(name.size()), mywindow(window) {
 
-    font.loadFromFile("BungeeSpice-Regular.ttf");
+    font.loadFromFile("T/BungeeSpice-Regular.ttf");
     for (int i = 0, ypos = static_cast<int>(menu_Y); i < max_menu; i++, ypos += menu_Step) {
         setInitText(mainMenu[i], name[i], menu_X, static_cast<float>(ypos));
     }
